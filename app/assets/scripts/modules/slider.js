@@ -1,7 +1,7 @@
 class Slider {
   constructor({
-    sliderSelector = ".slider",
-    sliderContainerSelector = ".slider__container",
+    sliderSelector = ".codebubb-slider",
+    sliderContainerSelector = ".codebubb-slider__container",
     previousSelector = "#prevBtn",
     nextSelector = "#nextBtn",
     transitionTime = 3000,
