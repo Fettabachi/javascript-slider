@@ -6,9 +6,7 @@ This slider was forked from [this repo](https://github.com/codebubb/javascript-s
 
   - ~~stop auto play when the next button is clicked~~
   - prevent rewind/fast-forward when paging past the lastslide or before the 1st slide
-  - learn how to get parcel to name the dist directory to docs
-  - learn how to get nesting and variables to work with parcel
-  - or implement a webpack workflow
+  - ~~implement a webpack workflow~~
   
 ### Installation
 This app requires Node.js to run.
@@ -22,10 +20,15 @@ $ npm install
 ```
 Start the server
 ```sh
-$ npm run serve
+$ npm run dev
 ```
 View the app in your favorite browser.
 ```sh
-http://localhost:1234
+http://localhost:3000
 ```
 ![](magic-giphy.gif)
+
+Build the dist package
+```sh
+$ npm run build
+```
