@@ -5,7 +5,7 @@ This slider was forked from [this repo](https://github.com/codebubb/javascript-s
 ### To Do.
 
   - ~~stop auto play when the next button is clicked~~
-  - prevent rewind/fast-forward when paging past the lastslide or before the 1st slide
+  - prevent rewind/fast-forward when paging past the last slide or before the first slide
   - ~~implement a webpack workflow~~
   
 ### Installation
