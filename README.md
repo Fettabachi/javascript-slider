@@ -4,7 +4,8 @@ This slider was forked from [this repo](https://github.com/codebubb/javascript-s
 
 ### To Do.
 
-  - stop auto play when the next button is clicked.
+  - ~~stop auto play when the next button is clicked~~
+  - prevent rewind/fast-forward when paging past the lastslide or before the 1st slide
   - learn how to get parcel to name the dist directory to docs
   - learn how to get nesting and variables to work with parcel
   - or implement a webpack workflow
