@@ -28,7 +28,7 @@ http://localhost:3000
 ```
 ![](magic-giphy.gif)
 
-Build the dist package
+Build the dist(docs) package
 ```sh
 $ npm run build
 ```
