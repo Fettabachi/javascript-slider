@@ -19,7 +19,7 @@ class Slider {
     this.setEventListeners();
     this.generatePagers();
     this.setAutoPlay(autoPlayOn, transitionTime);
-    this.runAutoPlayInterval = setInterval(this.nextSlide.bind(this), transitionTime);
+    this.runAutoPlayInterval = setInterval(this.nextSlideAutoPlay.bind(this), transitionTime);
   }
 
   moveSlides() {
@@ -32,7 +32,14 @@ class Slider {
     this.pagers.children[this.currentSlide].classList.add("active");
   }
 
+  nextSlideAutoPlay() {
+    this.currentSlide =
+      this.currentSlide >= this.slides - 1 ? 0 : this.currentSlide + 1;
+    this.moveSlides();
+  }
+
   nextSlide() {
+    this.clearlAutoPlayInterval()
     this.currentSlide =
       this.currentSlide >= this.slides - 1 ? 0 : this.currentSlide + 1;
     this.moveSlides();

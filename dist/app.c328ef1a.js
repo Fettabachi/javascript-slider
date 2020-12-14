@@ -159,7 +159,7 @@ var Slider = /*#__PURE__*/function () {
     this.setEventListeners();
     this.generatePagers();
     this.setAutoPlay(autoPlayOn, transitionTime);
-    this.runAutoPlayInterval = setInterval(this.nextSlide.bind(this), transitionTime);
+    this.runAutoPlayInterval = setInterval(this.nextSlideAutoPlay.bind(this), transitionTime);
   }
 
   _createClass(Slider, [{
@@ -172,8 +172,15 @@ var Slider = /*#__PURE__*/function () {
       this.pagers.children[this.currentSlide].classList.add("active");
     }
   }, {
+    key: "nextSlideAutoPlay",
+    value: function nextSlideAutoPlay() {
+      this.currentSlide = this.currentSlide >= this.slides - 1 ? 0 : this.currentSlide + 1;
+      this.moveSlides();
+    }
+  }, {
     key: "nextSlide",
     value: function nextSlide() {
+      this.clearlAutoPlayInterval();
       this.currentSlide = this.currentSlide >= this.slides - 1 ? 0 : this.currentSlide + 1;
       this.moveSlides();
     }
@@ -277,7 +284,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56859" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57595" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
